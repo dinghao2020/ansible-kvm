@@ -1,6 +1,6 @@
 ## kvm
 
-[![Travis CI](https://secure.travis-ci.org/debops/ansible-kvm.png)](http://travis-ci.org/debops/ansible-kvm) [![test-suite](http://img.shields.io/badge/test--suite-ansible--kvm-blue.svg)](https://github.com/debops/test-suite/tree/master/ansible-kvm/) [![Ansible Galaxy](http://img.shields.io/badge/galaxy-debops.kvm-660198.svg)](https://galaxy.ansible.com/list#/roles/1572)[![Platforms](http://img.shields.io/badge/platforms-debian%20|%20ubuntu-lightgrey.svg)](#)
+[![Travis CI](https://secure.travis-ci.org/debops/ansible-kvm.png)](http://travis-ci.org/debops/ansible-kvm) [![test-suite](http://img.shields.io/badge/test--suite-ansible--kvm-blue.svg)](https://github.com/debops/test-suite/tree/master/ansible-kvm/) [![Ansible Galaxy](http://img.shields.io/badge/galaxy-debops.kvm-660198.svg)](https://galaxy.ansible.com/list#/roles/1572) [![Platforms](http://img.shields.io/badge/platforms-debian%20|%20ubuntu-lightgrey.svg)](#)
 
 This role installs packages required for KVM support on a host. You can
 then access this host with, for example, `virt-manager` to create and

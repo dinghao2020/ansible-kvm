@@ -1,10 +1,8 @@
 ---
 
+# List of administrator accounts which should have access to libvirtd
+kvm_admins: [ '{{ ansible_ssh_user }}' ]
+
 # UNIX group that has access to libvirtd
 kvm_group: 'libvirt'
-
-kvm_download_images: False
-
-kvm_images_list:
-  - 'http://cdimage.debian.org/debian-cd/7.5.0/amd64/iso-cd/debian-7.5.0-amd64-netinst.iso'
 

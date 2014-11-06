@@ -6,3 +6,17 @@ kvm_admins: [ '{{ ansible_ssh_user }}' ]
 # UNIX group that has access to libvirtd
 kvm_group: 'libvirt'
 
+# Enable or disable packet forwarding for KVM hosts
+kvm_ferm_forwarding: True
+
+# External network interface - traffic on this interface is forwared to all
+# other hosts
+kvm_interface_external: 'br0'
+
+# Internal network interface - traffic on this interface is forwarded only
+# between hosts in internal network
+kvm_interface_internal: 'br1'
+
+# LAN network interface - traffic on this interface is forwarded to internal network
+kvm_interface_lan: 'br2'
+

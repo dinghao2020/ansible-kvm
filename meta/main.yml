@@ -1,6 +1,20 @@
 ---
 
-dependencies: []
+dependencies:
+
+  - role: debops.ferm
+    ferm_dependent_rules:
+
+      - type: 'custom'
+        dport: []
+        by_role: 'debops.kvm'
+        filename: 'kvm_bootp_checksum'
+        weight: '30'
+        rules: |
+          # Add checksums to BOOTP packets from KVM virtual machines
+          # http://www.redhat.com/archives/libvir-list/2010-August/msg00035.html
+          @hook post "iptables -A POSTROUTING -t mangle -p udp --dport bootpc -j CHECKSUM --checksum-fill";
+
 
 galaxy_info:
   author: 'Maciej Delmanowski'

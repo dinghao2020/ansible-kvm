@@ -15,12 +15,3 @@
   with_items: [ '{{ kvm_admins }}' ]
   when: (kvm_admins is defined and kvm_admins)
 
-- name: Configure firewall rules
-  template:
-    src: 'etc/ferm/ferm.d/kvm-forwarding.conf.j2'
-    dest: '/etc/ferm/ferm.d/kvm-forwarding.conf'
-    owner: 'root'
-    group: 'adm'
-    mode: '0644'
-  notify: [ 'Restart ferm' ]
-

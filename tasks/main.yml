@@ -7,6 +7,15 @@
     install_recommends: False
   with_items: [ 'libvirt-bin', 'netcat-openbsd', 'gawk', 'qemu-system', 'pm-utils', 'ebtables' ]
 
+- name: Install KVM-related packages for debian
+  apt:
+  apt:
+    name: '{{ item }}'
+    state: 'latest'
+    install_recommends: False
+  with_items: [ 'qemu-kvm' ]
+  when: ansible_os_family == 'Debian'
+
 - name: Add administrators to libvirt group
   user:
     name: '{{ item }}'

@@ -5,7 +5,7 @@
     name: '{{ item }}'
     state: 'latest'
     install_recommends: False
-  with_items: [ 'libvirt-bin', 'netcat-openbsd', 'gawk', 'qemu-system', 'pm-utils', 'ebtables' ]
+  with_items: [ 'libvirt-bin', 'netcat-openbsd', 'gawk', 'qemu-system', 'pm-utils', 'ebtables', 'qemu-kvm' ]
 
 - name: Add administrators to libvirt group
   user:

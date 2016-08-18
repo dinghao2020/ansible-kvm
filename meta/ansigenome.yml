@@ -1,9 +1,13 @@
 ---
 
 ansigenome_info:
-  github_url: "https://github.com/debops/ansible-kvm"
-  git_branch: "master"
-  galaxy_id: "1572"
+  galaxy_url: 'https://galaxy.ansible.com/debops/kvm'
+  github_url: 'https://github.com/debops/ansible-kvm'
+  git_branch: 'master'
+
+  status:
+    name: 'deprecated'
+    note: 'It has been superseded by [debops.libvirtd](https://github.com/debops/ansible-libvirtd).'
 
   travis: True
 
@@ -20,4 +24,3 @@ ansigenome_info:
     This role installs packages required for KVM support on a host. You can
     then access this host with, for example, `virt-manager` to create and
     manage KVM virtual machines.
-
